@@ -1,93 +1,130 @@
+/*My comments will typically appear right before the corresponding lines of code.
+My convention for z-indexing right now is that the city_.pngs have an index equal to the number in their file name.
+Home scenes before the city scenes have a negative z-index.
+Characters start indexing in the 100s.
+Vehicles index in the 200s.
+Anything special that needs to be on top indexes in the 1000s.*/
+
 * {
 	margin: 0px;
 	border-width: 0px;
 	padding: 0px;
 }
-.end {
+
+/*This div's text could just as well be a non-breaking space.
+It is a placeholder to make sure we have a long-enough vertical scrollbar to accommodate the duration of our game.
+Thus the number for "top" is always at least as large as the number for the game's last key frame, and probably a little bit larger.*/
+.duration {
 	position: absolute;
-	z-index: 13;
+	z-index: 1001;
 	top: 2500%;
 }
 
+/*The box which gives dialogue, thoughts, and narration.*/
+.narrator {
+	position: fixed;
+	top: 90%;
+	left: 0%;
+	height: 10%;
+	width: 100%;
+	background-color: white;
+}
+/*This will probably be collapsed with its parent, "narrator".
+"container" was created as a quick fix because I couldn't get a bordered box to work for the narrator.*/
+.container {
+	position: relative;
+	top: 10%;
+	left: 0.5%;
+	background-color: #999;
+	height: 80%;
+	width: 99%;
+}c
+
+/*This class is shared by each scene.
+This class has a ruleset here and below because the z-index stated in each scene's ruleset relies on a position rule first.
+This class has another ruleset after the scenes' individual rulesets because background-repeat and -size rely on the background rules in each scene.
+*/
 .scenes {
 	position: fixed;
 	top: 0%;
 	left: 0%;
 	height: 100%;
 	width: 100%;
-	opacity: 0;
 }
 .scene0 {
-	background: url(../images/levels/low_income_house.png) no-repeat;
-    background-size: 100% 100%;
-    z-index: 0;
+	background: url(../images/levels/low_income_house.png);
+    z-index: -1;
 }
 .scene1 {
-	background: url(../images/levels/city1.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city1.png);
     z-index: 1;
 }
 .scene2 {
-	background: url(../images/levels/city2.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city2.png);
     z-index: 2;
 }
 .scene3 {
-	background: url(../images/levels/city3.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city3.png);
     z-index: 3;
 }
 .scene4 {
-	background: url(../images/levels/city4.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city4.png);
     z-index: 4;
 }
 .scene5 {
-	background: url(../images/levels/city5.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city5.png);
     z-index: 5;
 }
 .scene6 {
-	background: url(../images/levels/city6.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city6.png);
     z-index: 6;
 }
 .scene7 {
-	background: url(../images/levels/city7.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city7.png);
     z-index: 7;
 }
 .scene8 {
-	background: url(../images/levels/city8.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city8.png);
     z-index: 8;
 }
 .scene9 {
-	background: url(../imagse/levels/city9.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/city9.png);
     z-index: 9;
 }
 .scene10 {
-	background: url(../images/levels/office_left.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/office_left.png);
     z-index: 10;
 }
 .scene11 {
-	background: url(../images/levels/office_right.png) no-repeat;
-    background-size: 100% 100%;
+	background: url(../images/levels/office_right.png);
     z-index: 11;
 }
+.scenes {
+	background-repeat: no-repeat;
+	background-size: 100% 90%;
+}
+/*As the default for all backgrounds is opacity zero, the first background has to be changed back to "1" like so.*/
 #first_scene {
 	opacity: 1;
 }
 
-.protagonist {
-	width: 40%;
-	height: 40%;
+.black_woman {
+	width: 33%;
+	height: 33%;
 	position: fixed;
-	z-index: 12;
-	top: 40%;
-	left: 40%;
+	left: -10%;
+	z-index: 101;
 	background: url(../images/characters/black-female.png) no-repeat center center;
+    background-size: contain;
+}
+
+.bus {
+	position: fixed;
+	width: 33%;
+	height: 35%;
+	top: 58%;
+	left: -33%;
+	z-index: 201;
+	background: url(../images/characters/public-bus-10.png) no-repeat center center;
     background-size: contain;
 }
