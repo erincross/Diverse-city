@@ -17,7 +17,7 @@ Thus the number for "top" is always at least as large as the number for the game
 .duration {
 	position: absolute;
 	z-index: 1001;
-	top: 2500%;
+	top: 4200%;
 }
 
 /*The box which gives dialogue, thoughts, and narration.*/
@@ -38,7 +38,7 @@ Thus the number for "top" is always at least as large as the number for the game
 	background-color: #999;
 	height: 80%;
 	width: 99%;
-}c
+}
 
 /*This class is shared by each scene.
 This class has a ruleset here and below because the z-index stated in each scene's ruleset relies on a position rule first.
@@ -99,6 +99,50 @@ This class has another ruleset after the scenes' individual rulesets because bac
 	background: url(../images/levels/office_right.png);
     z-index: 11;
 }
+.scene12 {
+	background: url(../images/levels/1bedroom.png);
+    z-index: 12;
+}
+.scene13 {
+	background: url(../images/levels/2livingroom.png);
+    z-index: 13;
+}
+.scene14 {
+	background: url(../images/levels/3kitchen.png);
+    z-index: 14;
+}
+.scene15 {
+	background: url(../images/levels/city4.png);
+    z-index: 15;
+}
+.scene16 {
+	background: url(../images/levels/city5.png);
+    z-index: 16;
+}
+.scene17 {
+	background: url(../images/levels/city6.png);
+    z-index: 17;
+}
+.scene18 {
+	background: url(../images/levels/city7.png);
+    z-index: 18;
+}
+.scene19 {
+	background: url(../images/levels/city8.png);
+    z-index: 19;
+}
+.scene20 {
+	background: url(../images/levels/city9.png);
+    z-index: 20;
+}
+.scene21 {
+	background: url(../images/levels/office_left.png);
+    z-index: 21;
+}
+.scene22 {
+	background: url(../images/levels/office_right.png);
+    z-index: 22;
+}
 .scenes {
 	background-repeat: no-repeat;
 	background-size: 100% 90%;
@@ -118,6 +162,36 @@ This class has another ruleset after the scenes' individual rulesets because bac
     background-size: contain;
 }
 
+.kid1 {
+	width: 33%;
+	height: 33%;
+	position: fixed;
+	left: -10%;
+	z-index: 101;
+	background: url(../images/characters/kid1.png) no-repeat center center;
+    background-size: contain;
+}
+
+.kid2 {
+	width: 33%;
+	height: 33%;
+	position: fixed;
+	left: -10%;
+	z-index: 101;
+	background: url(../images/characters/kid2.png) no-repeat center center;
+    background-size: contain;
+}
+.kid3 {
+	width: 33%;
+	height: 33%;
+	position: fixed;
+	left: -10%;
+	z-index: 101;
+	background: url(../images/characters/kid3.png) no-repeat center center;
+    background-size: contain;
+}
+
+
 .bus {
 	position: fixed;
 	width: 33%;
@@ -127,4 +201,26 @@ This class has another ruleset after the scenes' individual rulesets because bac
 	z-index: 201;
 	background: url(../images/characters/public-bus-10.png) no-repeat center center;
     background-size: contain;
+}
+
+.bus2 {
+	position: fixed;
+	width: 33%;
+	height: 35%;
+	top: 58%;
+	left: -33%;
+	z-index: 2;
+	background: url(../images/characters/schoolbus-10.png) no-repeat center center;
+    background-size: contain;
+}
+
+.white_male{
+	width: 33%;
+	height: 33%;
+	position: fixed;
+	left: -10%;
+	z-index: 101;
+	background: url(../images/characters/white_male.png) no-repeat center center;
+    background-size: contain;
+
 }
